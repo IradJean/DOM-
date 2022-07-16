@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>repalce child in js DOM</title>
+</head>
+<body>
+
+<div id="a">hi</div>
+<div id="b">dude</div>
+
+<ul>
+	<li>Hi</li>
+	<li>Philo</li>
+</ul>
+<ul class="Contains">
+	
+</ul>
+<script type="text/javascript">
+	// replace element node:
+	var divA = document.getElementById('a');
+	var newspan = document.createElement('span');
+	newspan.innerText = "Howdy";
+	divA.parentNode.replaceChild(newspan, divA);
+	// replace text content:
+	var divB =  document.getElementById('b').firstChild;
+	var newText=  document.createTextNode(' The replacing text');
+	divB.parentNode.replaceChild(newText, divB);
+	// using cloneNode() to clone a node:
+
+var cloneUl = document.querySelector('ul').cloneNode();
+var cloneUlWithChild = document.querySelector('ul').cloneNode(true);
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

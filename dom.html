@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM MANIPULATION</title>
+</head>
+<body>
+	<div id="A"></div>
+<span id="B"></span>
+<div id="C"></div>
+<div id="D"></div>
+<div id="E"></div>
+<i id="elm">Bite woe</i>
+<p>Here we are appending the element...</p>
+<br>
+<ul>
+<li>2</li>
+<li>3</li>
+</ul>
+<script type="text/javascript">
+	// inserting element before another:
+	//The insertBefore() method requires two parameters: the node to be inserted and the
+//reference node in the document before which you would like the node inserted.
+	var li = document.createElement('li');
+	var text1 = document.createTextNode('1');
+	   li.appendChild(text1);
+	   var ul = document.querySelector('ul');
+	   ul.insertBefore(li, ul.lastChild);
+	/*var elementNode = document.createElement('div');
+	console.log(elementNode, elementNode.nodeType);
+	var textNode = document.createTextNode('Hi');
+	le.log(textNode, textNode.nodeType);*/
+	//creating a strong element and text node and add them to the DOM
+	document.getElementById('A').innerHTML= '<strong>InnerHTML  </strong>';
+	document.getElementById('B').outerHTML = '<div id="B" class="new"><em>Hello There<em></div>';
+	document.getElementById('C').innerText = '<i>Hello</i>';
+	document.getElementById('D').textContent = '<strong>Dude</strong>';
+	document.getElementById('E').outerText = "<em>Whats</em>'up";
+	// using insertAdjacentHTML()
+	var elm = document.getElementById('elm');
+elm.insertAdjacentHTML('beforebegin', '<span>Hey-</span>');
+elm.insertAdjacentHTML('afterbegin', '<span>dude-</span>');
+elm.insertAdjacentHTML('beforeend', '<span>-are</span>');
+elm.insertAdjacentHTML('afterend', '<span>-you?</span>');
+
+// using appendChild() and insertBefore():
+var elementNode = document.createElement('strong');
+var textNode = document.createTextNode('Hiii');
+document.querySelector('p').appendChild(elementNode);
+document.querySelector('strong').appendChild(textNode);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Find sum</title>
+</head>
+<body>
+
+	<div class="main">
+		 <div class="input">
+		 	<input id="first" type="text" name="first-Input">
+		 	<span>+</span>
+		 	<input id="second" type="text" name="second-Input">
+		 </div>
+		 <div class="displaySum">
+		 	<p id="sum">sum: </p>
+		 </div>
+	</div>
+<script type="text/javascript">
+	var firstVar = document.querySelector('#first').focus();
+	var secondVar = document.querySelector('#second').focus();
+	var sum = firstVar+secondVar;
+	var appendSum = document.querySelector('#sum');
+	appendSum.addEventListener('input', function(){
+		return appendSum.parentNode.insertBefore(sum, lastChild);
+	})
+
+	
+
+
+
+
+</script>
+</body>
+</html>

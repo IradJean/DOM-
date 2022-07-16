@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM CTD</title>
+</head>
+<body>
+	<div id="A">Hi</div>
+	<div id="B">Dude</div>
+	<ul>
+		<li>a</li>
+		<li>b</li>
+		<li>c</li>
+	</ul>
+<script type="text/javascript">
+	// removing node element:
+	// removeChild();
+	var myPar = document.createElement('p');
+	var myText = document.createTextNode('hiiii');
+	var selectBody = document.querySelector('body');
+	//myPar.appendChild(myText);
+	myPar.innerHTML= '<h2>Hello there!</h2>';
+	selectBody.appendChild(myPar);
+
+
+	var divA = document.getElementById('A');
+	divA.parentNode.removeChild(divA);
+	// removing text content:
+	var divB = document.getElementById('B').firstChild;
+	divB.parentNode.removeChild(divB);
+	// getting  a Node List:
+	var elementList = document.querySelector('ul').childNodes;
+
+
+</script>
+</body>
+</html>
